@@ -8,16 +8,20 @@ Five slides total. Roughly 2 minutes of voice-over per slide.
 
 Title: **Stock Portfolio Suggestion Engine — Team**
 
-- Member 1: [Name] — [Role, e.g., Backend / Allocation engine]
-- Member 2: [Name] — [Role, e.g., Streamlit UI]
-- Member 3: [Name] — [Role, e.g., Data integration & charts]
-- Member 4: [Name] — [Role, e.g., Testing & documentation]
+| # | Name             | SJSU ID    | Role                                            |
+|---|------------------|------------|-------------------------------------------------|
+| 1 | Lam Nguyen       | 018229432  | Allocation Engine & Strategy Mapping            |
+| 2 | Jahnavi Kedia    | 018282368  | Streamlit UI & Visualization                    |
+| 3 | Nishan Paudel    | 018280561  | Market Data Integration & Portfolio Valuation   |
+| 4 | Harishita Gupta  | 018323331  | Persistence, Testing & Documentation            |
 
 Narration:
-> "Hi, we're [Team]. Our project is a Stock Portfolio Suggestion Engine. Each
-> of us owned a separate slice of the system: allocation logic, the Streamlit
-> dashboard, the yfinance integration with charting, and the test suite plus
-> documentation. We'll walk you through the design and a live demo."
+> "Hi, we're the team behind the Stock Portfolio Suggestion Engine. Lam owns
+> the allocation engine and strategy mapping; Jahnavi owns the Streamlit UI
+> and the visualizations; Nishan owns the market-data integration and the
+> portfolio-valuation logic; and Harishita owns the persistence layer, the
+> test suite, and the documentation. We'll now walk you through the design
+> and a live demo of all 10 test cases."
 
 ---
 
