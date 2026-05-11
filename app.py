@@ -184,7 +184,7 @@ def action_save(name: str) -> None:
     }
     portfolio_store.save_portfolio(name.strip(), payload)
     st.session_state["error"] = None
-    st.toast(f"Saved portfolio '{name.strip()}'.", icon=":white_check_mark:")
+    st.toast(f"Saved portfolio '{name.strip()}'.", icon="✅")
 
 
 def action_load(name: str) -> None:
@@ -201,7 +201,7 @@ def action_load(name: str) -> None:
     st.session_state["ticker_strategies"] = [tuple(p) for p in payload.get("ticker_strategies", [])]
     st.session_state["portfolio_id"] = payload.get("portfolio_id") or f"p-{uuid.uuid4().hex[:8]}"
     st.session_state["error"] = None
-    st.toast(f"Loaded portfolio '{name}'.", icon=":inbox_tray:")
+    st.toast(f"Loaded portfolio '{name}'.", icon="📥")
 
 
 # ---------- rendering ----------

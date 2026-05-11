@@ -100,9 +100,15 @@ def fetch_history(tickers: list[str], days: int = 7) -> pd.DataFrame:
 
     if len(tickers) == 1:
         t = tickers[0]
-        if "Close" in data.columns:
-            return pd.DataFrame({t: data["Close"]}).dropna(how="all")
-        return pd.DataFrame()
+        if isinstance(data.columns, pd.MultiIndex) and t in data.columns.get_level_values(0):
+            close = data[t]["Close"] if "Close" in data[t].columns else None
+        elif "Close" in data.columns:
+            close = data["Close"]
+        else:
+            close = None
+        if close is None:
+            return pd.DataFrame()
+        return pd.DataFrame({t: close}).dropna(how="all")
 
     closes = {}
     for t in tickers:
